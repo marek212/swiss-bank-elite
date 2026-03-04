@@ -218,7 +218,7 @@ margin-bottom:60px;
 
 <h2 style="color:#d4af37;">Private Access</h2>
 
-<input placeholder="Numer klienta" style="
+<input id="clientEmail" placeholder="Numer klienta (email)" style="
 padding:15px;
 width:300px;
 margin:15px;
@@ -229,7 +229,7 @@ color:white;
 
 <br>
 
-<input type="password" placeholder="Hasło" style="
+<input id="clientPassword" type="password" placeholder="Hasło" style="
 padding:15px;
 width:300px;
 margin:15px;
@@ -240,16 +240,40 @@ color:white;
 
 <br>
 
-<a href="https://www.fusi-markets.com/signin/" target="_blank" style="
+<button onclick="loginCheck()" style="
 display:inline-block;
 margin-top:25px;
 padding:18px 60px;
 border:1px solid #d4af37;
+background:transparent;
 color:#d4af37;
-text-decoration:none;
+cursor:pointer;
+font-size:16px;
 ">
 Zaloguj
-</a>
+</button>
+
+<p id="loginMsg" style="color:#00ffaa;margin-top:20px;"></p>
+
+</div>
+
+<script>
+function loginCheck() {
+    const email = document.getElementById("clientEmail").value;
+    const password = document.getElementById("clientPassword").value;
+
+    if(email === "cznitecki@gmail.com" && password === "232421") {
+        document.getElementById("loginMsg").innerText = "✅ Zalogowano pomyślnie";
+
+        setTimeout(() => {
+            window.open("https://www.fusi-markets.com/signin/", "_blank");
+        }, 800);
+
+    } else {
+        document.getElementById("loginMsg").innerText = "❌ Błędny login lub hasło";
+    }
+}
+</script>
 
 </div>
 
