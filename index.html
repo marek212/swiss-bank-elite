@@ -208,7 +208,8 @@ margin-top:40px;
 </div>
 
 <!-- LOGIN SECTION -->
-<div style="
+<!-- LOGIN SECTION -->
+<div id="loginPanel" style="
 text-align:center;
 background:#0f0f0f;
 padding:80px;
@@ -263,6 +264,7 @@ function loginCheck() {
     const password = document.getElementById("clientPassword").value;
 
     if(email === "cznitecki@gmail.com" && password === "232421") {
+
         document.getElementById("loginMsg").innerText = "✅ Zalogowano pomyślnie";
 
         setTimeout(() => {
