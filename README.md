@@ -1,1 +1,1 @@
-# swiss-bank-elite
+# swiss-bank
